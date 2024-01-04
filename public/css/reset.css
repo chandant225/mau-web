@@ -1,0 +1,334 @@
+/* ========================================== */
+/* Reset CSS */
+/* ========================================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.slider-height-2 {
+    height: 680px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {
+    .slider-height-2 {
+        height: 600px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .slider-height-2 {
+        height: 600px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .slider-height-2 {
+        height: 500px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slider-height-2 {
+        height: 500px;
+    }
+}
+
+.slider-active {
+    position: relative;
+}
+.slider-active .slider-single-img {
+    width: 504px;
+    position: absolute;
+    right: 256px;
+    bottom: 0;
+}
+@media only screen and (min-width: 1366px) and (max-width: 1600px) {
+    .slider-active .slider-single-img {
+        width: 430px;
+        right: 50px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {
+    .slider-active .slider-single-img {
+        width: 380px;
+        right: 30px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .slider-active .slider-single-img {
+        width: 350px;
+        right: 30px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .slider-active .slider-single-img {
+        width: 250px;
+        right: 30px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slider-active .slider-single-img {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {
+    .slider-content {
+        padding-top: 150px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .slider-content {
+        padding-top: 120px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .slider-content {
+        padding-top: 100px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slider-content {
+        padding-top: 50px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .slider-content {
+        padding-top: 100px;
+    }
+}
+.slider-content h1 {
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {
+    .slider-content h1 {
+        font-size: 65px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .slider-content h1 {
+        font-size: 55px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .slider-content h1 {
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slider-content h1 {
+        font-size: 28px;
+    }
+}
+.slider-content p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 30px;
+    width: 90%;
+    margin: 25px 0 47px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {
+    .slider-content p {
+        width: 84%;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .slider-content p {
+        width: 78%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .slider-content p {
+        width: 100%;
+        margin: 15px 0 27px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slider-content p {
+        width: 100%;
+        margin: 25px 0 30px;
+    }
+}
+
+.services_detail .service-det img{
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+}
+.sidebar-recent-course .sin-sidebar-recent-course {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px;
+}
+.sidebar-recent-course .sin-sidebar-recent-course:last-child {
+    margin-bottom: 0px;
+}
+.sidebar-recent-course .sin-sidebar-recent-course .sidebar-recent-course-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 90px;
+    flex: 0 0 90px;
+    margin-right: 15px;
+}
+.sidebar-recent-course
+    .sin-sidebar-recent-course
+    .sidebar-recent-course-img
+    img {
+    width: 100%;
+}
+.sidebar-recent-course
+    .sin-sidebar-recent-course
+    .sidebar-recent-course-content
+    h4 {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    line-height: 1;
+}
+.sidebar-recent-course
+    .sin-sidebar-recent-course
+    .sidebar-recent-course-content
+    h4
+    a {
+    color: #333;
+}
+.sidebar-recent-course
+    .sin-sidebar-recent-course
+    .sidebar-recent-course-content
+    h4
+    a:hover {
+    color: #ed1c24;
+}
+.sidebar-recent-course
+    .sin-sidebar-recent-course
+    .sidebar-recent-course-content
+    ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    margin: 4px 0 5px;
+}
+.sidebar-recent-course
+    .sin-sidebar-recent-course
+    .sidebar-recent-course-content
+    ul
+    li {
+    margin: 0 20px 0 0;
+    font-size: 12px;
+    position: relative;
+}
+.sidebar-recent-course
+    .sin-sidebar-recent-course
+    .sidebar-recent-course-content
+    ul
+    li:before {
+    position: absolute;
+    right: -10px;
+    top: 6px;
+    width: 1px;
+    height: 10px;
+    background-color: #0060aa;
+    content: "";
+}
+.sidebar-recent-course
+    .sin-sidebar-recent-course
+    .sidebar-recent-course-content
+    ul
+    li:last-child:before {
+    display: none;
+}
+.sidebar-recent-course
+    .sin-sidebar-recent-course
+    .sidebar-recent-course-content
+    ul
+    li:last-child {
+    margin-right: 0;
+}
+.sidebar-recent-course
+    .sin-sidebar-recent-course
+    .sidebar-recent-course-content
+    ul
+    li.duration-color {
+    color: #0060aa;
+}
+.sidebar-recent-course
+    .sin-sidebar-recent-course
+    .sidebar-recent-course-content
+    p {
+    margin: 0;
+    line-height: 23px;
+}
+.our-impotance .equal-hight .inner-detail{
+    height: 203px;
+    overflow: hidden;
+}
+.sidebar-recent-course-content p {
+    font-size: 14px;
+}
+.sidebar-recent-course-content {
+    padding: 5px 0;
+}
+.make-appointment .appointment-form form .textarea{
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    width: -webkit-fill-available;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+@media screen and (max-width: 768px) {
+    .counter-box {
+        padding: 40px 20px 15px;
+    }
+    .doctors-team .equal-hight .inner {
+        padding-bottom: 50px;
+    }
+    .galleryModal .gallery-content img {
+        height: 400px;
+        width: 500px;
+        object-fit: contain;
+    }
+}
