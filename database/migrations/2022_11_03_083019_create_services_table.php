@@ -18,6 +18,8 @@ class CreateServicesTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->longText('description');
+            $table->string('category'); 
+            $table->string('pdf_file')->nullable();
             $table->string('meta_title');
             $table->longText('meta_description');
             $table->longText('meta_keywords');

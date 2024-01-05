@@ -17,10 +17,10 @@ class ServiceController extends Controller
     public function index()
     {
         $services = Service::orderBy('created_at', 'desc')->get();
-        return view('admin.service.list',compact('services'));
+        return view('admin.service.list', compact('services'));
     }
 
-    
+
 
     /**
      * Show the form for creating a new resource.
@@ -41,31 +41,40 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'=> 'required',
-            'description'=> 'required'
+            'title' => 'required',
+            'description' => 'required',
+            'category' => 'required',
+            'pdf_file' => 'required|mimes:pdf|max:2048',
         ]);
 
-        $slug = Str::slug($request->title,'-');
+        $slug = Str::slug($request->title, '-');
 
-        if($request->hasfile('image')){
+        if ($request->hasFile('image') && $request->hasFile('pdf_file')) {
             $name = $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path(). '/uploads/service',$name);
+            $request->file('image')->move(public_path() . '/uploads/service', $name);
+
+            $pdfName = $request->file('pdf_file')->getClientOriginalName();
+            $request->file('pdf_file')->move(public_path() . '/uploads/service/pdf', $pdfName);
+            $pdfFilePath = '/uploads/service/pdf/' . $pdfName;
+
             $service = new Service();
             $service->title = $request->title;
             $service->slug = $slug;
             $service->description = $request->description;
+            $service->category = $request->category;
+            $service->pdf_file = $pdfFilePath;
             $service->meta_title = $request->meta_title;
             $service->meta_description = $request->meta_description;
             $service->meta_keywords = $request->meta_keywords;
             $service->filename = $name;
             $save_service = $service->save();
-            if($save_service){
-                return redirect()->route('admin.service.list')->with('success','service has been added successfully.');
-            }else {
-                return back()->with('error','something went wrong');
+            if ($save_service) {
+                return redirect()->route('admin.service.list')->with('success', 'service has been added successfully.');
+            } else {
+                return back()->with('error', 'something went wrong');
             }
-        }else {
-            return back()->with('error','please choose an image');
+        } else {
+            return back()->with('error', 'please choose an image');
         }
     }
 
@@ -77,9 +86,9 @@ class ServiceController extends Controller
      */
     public function show($slug)
     {
-       $services = Service::orderBy('updated_at','desc')->get();
-       $service = Service::where('slug', $slug)->first();
-       return view('client.service-details')->with(['services' => $services, 'service' => $service]);
+        $services = Service::orderBy('updated_at', 'desc')->get();
+        $service = Service::where('slug', $slug)->first();
+        return view('client.service-details')->with(['services' => $services, 'service' => $service]);
     }
 
     /**
@@ -92,7 +101,7 @@ class ServiceController extends Controller
     {
         // $service = Service::where("id",$id)->first();
         $service = Service::find($id);
-        return view('admin.service.edit',compact('service'));
+        return view('admin.service.edit', compact('service'));
     }
 
     /**
@@ -104,15 +113,21 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $slug = Str::slug($request->title,'-');
-        if($request->hasfile('image')){
+        $slug = Str::slug($request->title, '-');
+        $pdfFilePath = null;
+        if ($request->hasFile('image') && $request->hasFile('pdf_file')) {
             $name = $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path(). '/uploads/service',$name);
+            $request->file('image')->move(public_path() . '/uploads/service', $name);
+
+            $pdfName = $request->file('pdf_file')->getClientOriginalName();
+            $request->file('pdf_file')->move(public_path() . '/uploads/service/pdf', $pdfName);
+            $pdfFilePath = '/uploads/service/pdf/' . $pdfName;
+        
             $service = Service::find($id);
             $filename = $service->filename;
-            if (File::exists(public_path('uploads/service/'.$filename))) {
-               File::delete(public_path('uploads/service/'.$filename));
-               }
+            if (File::exists(public_path('uploads/service/' . $filename))) {
+                File::delete(public_path('uploads/service/' . $filename));
+            }
             $service->title = $request->title;
             $service->slug = $slug;
             $service->description = $request->description;
@@ -121,27 +136,30 @@ class ServiceController extends Controller
             $service->meta_keywords = $request->meta_keywords;
             $service->filename = $name;
             $save_service = $service->save();
-            if($save_service){
-                return redirect()->route('admin.service.list')->with('success','service has been updated successfully.');
-            }else {
-                return back()->with('error','something went wrong');
+            if ($save_service) {
+                return redirect()->route('admin.service.list')->with('success', 'service has been updated successfully.');
+            } else {
+                return back()->with('error', 'something went wrong');
             }
-        }else {
+        } else {
             $service = Service::find($id);
             $filename = $service->filename;
             $service->title = $request->title;
             $service->slug = $slug;
             $service->description = $request->description;
+            $service->category = $request->category;
+            $service->pdf_file_path = $pdfFilePath;
+            $service->filename = $filename;
             $service->meta_title = $request->meta_title;
             $service->meta_description = $request->meta_description;
             $service->meta_keywords = $request->meta_keywords;
-            $service->filename = $filename;
-        
+          
+
             $save_service = $service->save();
-            if($save_service){
-                return redirect()->route('admin.service.list')->with('success','service has been updated successfully.');
-            }else {
-                return back()->with('error','something went wrong');
+            if ($save_service) {
+                return redirect()->route('admin.service.list')->with('success', 'service has been updated successfully.');
+            } else {
+                return back()->with('error', 'something went wrong');
             }
         }
     }
@@ -156,16 +174,16 @@ class ServiceController extends Controller
     {
         $service = Service::find($id);
         $filename = $service->filename;
-     if (File::exists(public_path('uploads/service/'.$filename))) {
-        File::delete(public_path('uploads/service/'.$filename));
-      }
+        if (File::exists(public_path('uploads/service/' . $filename))) {
+            File::delete(public_path('uploads/service/' . $filename));
+        }
         $service->delete();
-        return redirect()->route('admin.service.list')->with('success','service has been deleted successfully.');
+        return redirect()->route('admin.service.list')->with('success', 'service has been deleted successfully.');
     }
 
-    public function serviceEditorUpload (Request $request) 
+    public function serviceEditorUpload(Request $request)
     {
-          if($request->hasFile('upload')) {
+        if ($request->hasFile('upload')) {
             //get filename with extension
             $filenamewithextension = $request->file('upload')->getClientOriginalName();
 
@@ -176,13 +194,13 @@ class ServiceController extends Controller
             $extension = $request->file('upload')->getClientOriginalExtension();
 
             //filename to store
-            $filenametostore = $filename.'_'.time().'.'.$extension;
+            $filenametostore = $filename . '_' . time() . '.' . $extension;
 
             //Upload File
-            $request->file('upload')->move(public_path().'/uploads/editor/service', $filenametostore);
+            $request->file('upload')->move(public_path() . '/uploads/editor/service', $filenametostore);
 
             $CKEditorFuncNum = $request->input('CKEditorFuncNum');
-            $url = asset('uploads/editor/service/'.$filenametostore);
+            $url = asset('uploads/editor/service/' . $filenametostore);
             $message = 'File uploaded successfully';
             $result = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$message')</script>";
 
