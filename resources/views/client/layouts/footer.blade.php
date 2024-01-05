@@ -152,35 +152,6 @@
                 </div>
             </div>
 
-            <div class="col-sm-6 col-lg-3">
-                <div class="footer-item">
-                    <div class="footer-hours">
-                        <h3>Opening Hours</h3>
-                        <ul>
-                            <li>
-                                Sun - Fri
-                                <span>08:00 AM - 05:00 PM</span>
-                            </li>
-                            <li>
-                                Saturday
-                                <span>Closed</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="footer-item">
-                    <div class="footer-links">
-                        <div class="map-item">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3532.3780342126056!2d85.350454!3d27.705612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1981f114d961%3A0xd4b4f33375050e34!2sTilganga%20Institute%20of%20Ophthalmology!5e0!3m2!1sen!2snp!4v1690535290188!5m2!1sen!2snp"
-                                width="380" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </footer>
@@ -195,7 +166,7 @@
                     <script>
                         document.write(new Date().getFullYear());
                     </script>
-                    RSU 
+                    outofboxdesign
                     {{-- Designed By
                     <a href="https://outofboxdesign.com/" target="_blank">outofboxdesign</a> --}}
                 </p>

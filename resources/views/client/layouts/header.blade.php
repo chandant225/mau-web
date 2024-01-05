@@ -27,11 +27,7 @@
                             <h4>Location</h4>
                             <a href="#">{{ $profile->address }}</a>
                         </li>
-                        <li>
-                            <i class="flaticon-clock"></i>
-                            <h4>Sunday - Friday</h4>
-                            <span>8:00 AM - 5:00 PM</span>
-                        </li>
+                       
                     </ul>
                 </div>
             </div>

@@ -23,7 +23,7 @@
                 <form method="post" action="{{ route('admin.service.update', ['id' => $service->id]) }}"
                     enctype="multipart/form-data">
                     @csrf
-                    
+
                     <div class="card-body">
                         <div class="form-group">
                             <label for="title">Title</label>
@@ -45,6 +45,43 @@
                                 @enderror
                             </span>
                         </div>
+                        <div class="form-group">
+                            <label for="category">Choose category</label>
+                            <select id="selectCategory" name="category" class="form-control">
+                                <option value="news" {{ $service->category == 'news' ? 'selected' : '' }}>News &
+                                    Announcements</option>
+                                <option value="events" {{ $service->category == 'events' ? 'selected' : '' }}>Upcoming
+                                    Events</option>
+                                <option value="results" {{ $service->category == 'results' ? 'selected' : '' }}>Examinations &
+                                    Results</option>
+                            </select>
+                            <span class="text-danger">
+                                @error('category')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pdf_file">PDF File</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" name="pdf_file" />
+                                </div>
+                            </div>
+                            <span class="text-danger">
+                                @error('pdf_file')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+
+                            @if ($service->pdf_file)
+                                <div class="mt-2">
+                                    <strong>Current PDF File:</strong> {{ $service->pdf_file }}
+                                </div>
+                            @endif
+                        </div>
+
 
                         <div class="form-group">
                             <label for="exampleInputFile">File input</label>
@@ -54,7 +91,7 @@
                                 </div>
                             </div>
                             <img src="{{ env('APP_URL') . '/uploads/service/' . $service->filename }}"
-                                alt="{{ $service->title }}" class="w-100 img-responsive" />
+                                alt="{{ $service->title }}" class="w-25 img-responsive" />
                         </div>
                         <div class="form-group">
                             <label for="meta_title">meta_title</label>

@@ -115,54 +115,55 @@ class ServiceController extends Controller
     {
         $slug = Str::slug($request->title, '-');
         $pdfFilePath = null;
-        if ($request->hasFile('image') && $request->hasFile('pdf_file')) {
-            $name = $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path() . '/uploads/service', $name);
-
-            $pdfName = $request->file('pdf_file')->getClientOriginalName();
-            $request->file('pdf_file')->move(public_path() . '/uploads/service/pdf', $pdfName);
-            $pdfFilePath = '/uploads/service/pdf/' . $pdfName;
-        
-            $service = Service::find($id);
-            $filename = $service->filename;
-            if (File::exists(public_path('uploads/service/' . $filename))) {
-                File::delete(public_path('uploads/service/' . $filename));
+        $imageFilePath = null;
+    
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageFilePath = '/uploads/service/' . $image->getClientOriginalName();
+            $image->move(public_path() . '/uploads/service', $image->getClientOriginalName());
+        }
+    
+        if ($request->hasFile('pdf_file')) {
+            $pdf = $request->file('pdf_file');
+            $pdfFilePath = '/uploads/service/pdf/' . $pdf->getClientOriginalName();
+            $pdf->move(public_path() . '/uploads/service/pdf', $pdf->getClientOriginalName());
+        }
+    
+        $service = Service::find($id);
+    
+        if ($pdfFilePath) {
+            // Delete the old PDF file if it exists
+            if (File::exists(public_path($service->pdf_file))) {
+                File::delete(public_path($service->pdf_file));
             }
-            $service->title = $request->title;
-            $service->slug = $slug;
-            $service->description = $request->description;
-            $service->meta_title = $request->meta_title;
-            $service->meta_description = $request->meta_description;
-            $service->meta_keywords = $request->meta_keywords;
-            $service->filename = $name;
-            $save_service = $service->save();
-            if ($save_service) {
-                return redirect()->route('admin.service.list')->with('success', 'service has been updated successfully.');
-            } else {
-                return back()->with('error', 'something went wrong');
+            $service->pdf_file = $pdfFilePath;
+        }
+    
+        if ($imageFilePath) {
+            // Delete the old image file if it exists
+            if (File::exists(public_path($service->filename))) {
+                File::delete(public_path($service->filename));
             }
+            $service->filename = $image->getClientOriginalName();
+        }
+    
+        $service->title = $request->title;
+        $service->slug = $slug;
+        $service->description = $request->description;
+        $service->category = $request->category;
+        $service->meta_title = $request->meta_title;
+        $service->meta_description = $request->meta_description;
+        $service->meta_keywords = $request->meta_keywords;
+    
+        $save_service = $service->save();
+    
+        if ($save_service) {
+            return redirect()->route('admin.service.list')->with('success', 'Service has been updated successfully.');
         } else {
-            $service = Service::find($id);
-            $filename = $service->filename;
-            $service->title = $request->title;
-            $service->slug = $slug;
-            $service->description = $request->description;
-            $service->category = $request->category;
-            $service->pdf_file_path = $pdfFilePath;
-            $service->filename = $filename;
-            $service->meta_title = $request->meta_title;
-            $service->meta_description = $request->meta_description;
-            $service->meta_keywords = $request->meta_keywords;
-          
-
-            $save_service = $service->save();
-            if ($save_service) {
-                return redirect()->route('admin.service.list')->with('success', 'service has been updated successfully.');
-            } else {
-                return back()->with('error', 'something went wrong');
-            }
+            return back()->with('error', 'Something went wrong');
         }
     }
+    
 
     /**
      * Remove the specified resource from storage.

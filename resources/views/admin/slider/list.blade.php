@@ -35,10 +35,11 @@
                                         <tr>
                                             <td>{{ $slider->id }}</td>
                                             <td>{{ $slider->title }}</td>
-                                            <td><img src="{{ env('APP_URL') . '/uploads/slider/' . $slider->filename }}"
-                                                    alt="{{ $slider->title }}" class="w-100 img-responsive" />
-                                            </td>
                                             <td><span class="tag tag-success">{!! $slider->description !!}</span></td>
+                                            <td><img src="{{ env('APP_URL') . '/uploads/slider/' . $slider->filename }}"
+                                                    alt="{{ $slider->title }}" class="w-25 img-responsive" />
+                                            </td>
+                                           
                                             <td><button class="btn btn-primary"><a class="text-white"
                                                         href="{{ route('admin.slider.edit', ['id' => $slider->id]) }}">Edit</a></button>
                                                 <form method="post"

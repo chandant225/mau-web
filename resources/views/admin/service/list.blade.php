@@ -24,12 +24,12 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>title</th>
-                                        <th>meta_title</th>
-                                        <th>meta_description</th>
-                                        <th>meta_keywords</th>
-                                        <th>image</th>
-                                        <th>action</th>
+                                        <th>Title</th>
+                                        <th>Category</th>
+                                        <th>PDF File</th>
+                                        <th>Meta Title</th>
+                                        <th>Image</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 @foreach ($services as $service)
@@ -37,9 +37,20 @@
                                         <tr>
                                             <td>{{ $service->id }}</td>
                                             <td>{{ $service->title }}</td>
+                                            <td>
+                                                {{$service->category}}
+                                            </td>
+                                            <td>
+                                                @if ($service->pdf_file)
+                                                    <a href="{{ env('APP_URL') . '/uploads/service/pdf/' . $service->pdf_file }}"
+                                                        target="_blank">
+                                                        View PDF
+                                                    </a>
+                                                @else
+                                                    No PDF available
+                                                @endif
+                                            </td>
                                             <td>{{ $service->meta_title }}</td>
-                                            <td>{{ $service->meta_description }}</td>
-                                            <td>{{ $service->meta_keywords }}</td>
                                             <td><img src="{{ env('APP_URL') . '/uploads/service/' . $service->filename }}"
                                                     alt="{{ $service->title }}" class="w-25 img-responsive" />
                                             </td>

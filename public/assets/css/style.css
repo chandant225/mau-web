@@ -71,7 +71,7 @@ button:focus {
 .common-btn {
     display: inline-block;
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     padding: 12px 25px;
     font-weight: 500;
     border: 0;
@@ -175,7 +175,7 @@ button:focus {
 .section-title .top .sub-title {
     display: block;
     font-weight: 600;
-    color: #20bdd1;
+    color: #098c3c;
     position: absolute;
     top: 30px;
     left: 0;
@@ -222,7 +222,7 @@ button:focus {
 }
 .header-area .right ul li:hover i {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .header-area .right ul li i {
     display: inline-block;
@@ -230,8 +230,8 @@ button:focus {
     height: 35px;
     line-height: 35px;
     text-align: center;
-    color: #20bdd1;
-    background-color: #e0f8fc;
+    color: #098c3c;
+    background-color: #d0f2de;
     border-radius: 5px;
     font-size: 15px;
     -webkit-transition: 0.5s;
@@ -254,14 +254,14 @@ button:focus {
     font-size: 13px;
 }
 .header-area .right ul li a:hover {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .header-area .right ul li span {
     display: block;
     font-size: 13px;
 }
 .main-nav {
-    background-color: #20bdd1;
+    background-color: #098c3c;
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
@@ -340,7 +340,7 @@ button:focus {
     top: -3px !important;
 }
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li:hover a {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li:last-child {
     border-bottom: 0;
@@ -358,7 +358,7 @@ button:focus {
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li a:hover,
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li a:focus,
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li a.active {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
     right: -100%;
@@ -380,7 +380,7 @@ button:focus {
     .dropdown-menu
     li
     a.active {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .main-nav .dropdown-toggle::after {
     display: none;
@@ -476,7 +476,7 @@ button:focus {
     height: 30px;
     text-align: center;
     border-radius: 5px;
-    color: #20bdd1;
+    color: #098c3c;
     background-color: #fff;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -517,7 +517,7 @@ button:focus {
     border-radius: 5px;
 }
 .modal .modal-body .image-area a:hover {
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .modal .modal-body .social-area ul {
     margin: 0;
@@ -530,7 +530,7 @@ button:focus {
 }
 .modal .modal-body .social-area ul li a {
     display: block;
-    color: #20bdd1;
+    color: #098c3c;
     font-size: 20px;
 }
 .modal .modal-body .social-area ul li a:hover {
@@ -603,7 +603,7 @@ button:focus {
     font-size: 20px;
     display: block;
     font-weight: 600;
-    color: #20bdd1;
+    color: #098c3c;
     margin-bottom: 25px;
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
@@ -661,7 +661,7 @@ button:focus {
 }
 .about-area .about-content ul li:hover i {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .about-area .about-content ul li i {
     position: absolute;
@@ -672,7 +672,7 @@ button:focus {
     line-height: 30px;
     text-align: center;
     font-size: 25px;
-    color: #20bdd1;
+    color: #098c3c;
     background-color: #fff;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -696,7 +696,7 @@ button:focus {
 }
 .services-item:hover .bottom .icon {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .services-item .top a {
     display: block;
@@ -731,29 +731,29 @@ button:focus {
     top: 0;
     left: 0;
     border-top-left-radius: 10px;
-    border-top: 3px solid #20bdd1;
-    border-left: 3px solid #20bdd1;
+    border-top: 3px solid #098c3c;
+    border-left: 3px solid #098c3c;
 }
 .services-item .bottom span:nth-child(2) {
     top: 0;
     right: 0;
     border-top-right-radius: 10px;
-    border-top: 3px solid #20bdd1;
-    border-right: 3px solid #20bdd1;
+    border-top: 3px solid #098c3c;
+    border-right: 3px solid #098c3c;
 }
 .services-item .bottom span:nth-child(3) {
     bottom: 0;
     right: 0;
     border-bottom-right-radius: 10px;
-    border-bottom: 3px solid #20bdd1;
-    border-right: 3px solid #20bdd1;
+    border-bottom: 3px solid #098c3c;
+    border-right: 3px solid #098c3c;
 }
 .services-item .bottom span:nth-child(4) {
     bottom: 0;
     left: 0;
     border-bottom-left-radius: 10px;
-    border-bottom: 3px solid #20bdd1;
-    border-left: 3px solid #20bdd1;
+    border-bottom: 3px solid #098c3c;
+    border-left: 3px solid #098c3c;
 }
 .services-item .bottom .icon {
     display: inline-block;
@@ -766,8 +766,8 @@ button:focus {
     border-radius: 10px;
     text-align: center;
     font-size: 30px;
-    color: #20bdd1;
-    background-color: #e0f8fc;
+    color: #098c3c;
+    background-color: #d0f2de;
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
@@ -779,14 +779,14 @@ button:focus {
     color: #02123a;
 }
 .services-item .bottom h3 a:hover {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .services-item .bottom p {
     margin-bottom: 10px;
 }
 .services-item .bottom .services-btn {
     display: inline-block;
-    color: #20bdd1;
+    color: #098c3c;
     font-weight: 500;
 }
 .services-item .bottom .services-btn i {
@@ -889,7 +889,7 @@ button:focus {
     border-radius: 5px;
     font-size: 25px;
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .doctors-item .top ul li a i {
     line-height: 45px;
@@ -926,7 +926,7 @@ button:focus {
     height: 60px;
     line-height: 60px;
     text-align: center;
-    color: #20bdd1;
+    color: #098c3c;
     background-color: #e1f4fa;
     font-size: 35px;
     border-radius: 5px;
@@ -936,14 +936,14 @@ button:focus {
 }
 .doctors-item .bottom i:hover {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .doctors-item .bottom h3 {
     font-size: 22px;
     margin-bottom: 6px;
 }
 .doctors-item .bottom h3 a {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .doctors-item .bottom h3 a:hover {
     color: #02123a;
@@ -985,7 +985,7 @@ button:focus {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     z-index: -1;
     -webkit-animation: border-transform-default-two 10s linear infinite
         alternate forwards;
@@ -1016,7 +1016,7 @@ button:focus {
 }
 .choose-area .choose-content ul li:hover i {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .choose-area .choose-content ul li i {
     display: inline-block;
@@ -1026,7 +1026,7 @@ button:focus {
     text-align: center;
     font-size: 25px;
     border-radius: 10px;
-    color: #20bdd1;
+    color: #098c3c;
     background-color: #fff;
     -webkit-box-shadow: 0 0 20px 0 #e5f9fd;
     box-shadow: 0 0 20px 0 #e5f9fd;
@@ -1181,7 +1181,7 @@ button:focus {
     color: #02123a;
 }
 .blog-item .bottom h3 a:hover {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .blog-item .bottom p {
     margin-bottom: 12px;
@@ -1198,7 +1198,7 @@ button:focus {
 .blog-item .bottom ul li span {
     display: block;
     font-weight: 500;
-    color: #20bdd1;
+    color: #098c3c;
     font-size: 16px;
 }
 .testimonials-area {
@@ -1231,7 +1231,7 @@ button:focus {
 }
 .testimonials-area .testimonials-item {
     border-radius: 10px;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     padding: 30px 90px 30px 30px;
 }
 .testimonials-area .testimonials-item .top {
@@ -1295,7 +1295,7 @@ button:focus {
 }
 .testimonials-area .owl-theme .owl-dots .owl-dot.active span,
 .testimonials-area .owl-theme .owl-dots .owl-dot:hover span {
-    background: #20bdd1;
+    background: #098c3c;
 }
 .partner-item {
     text-align: center;
@@ -1313,7 +1313,7 @@ button:focus {
 }
 .footer-item h3 {
     font-size: 22px;
-    color: #20bdd1;
+    color: #098c3c;
     margin-bottom: 30px;
 }
 .footer-item .footer-contact ul {
@@ -1474,7 +1474,7 @@ button:focus {
 }
 .banner-area.two .owl-theme .owl-dots .owl-dot.active span,
 .banner-area.two .owl-theme .owl-dots .owl-dot:hover span {
-    background: #20bdd1;
+    background: #098c3c;
 }
 .about-area.two {
     background-image: unset;
@@ -1506,7 +1506,7 @@ button:focus {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     z-index: -1;
     -webkit-animation: border-transform-default-two 10s linear infinite
         alternate forwards;
@@ -1529,7 +1529,7 @@ button:focus {
 }
 .about-area.two .about-content ul li:hover i {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .services-area.two {
     background-image: url(../images/testimonials-bg.jpg);
@@ -1555,7 +1555,7 @@ button:focus {
     margin-top: 0;
 }
 .counter-area {
-    background-image: url(../images/consultation-bg.jpg);
+    background-image: url(../images/testimonials-bg.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1583,7 +1583,7 @@ button:focus {
 }
 .counter-item i {
     display: inline-block;
-    color: #20bdd1;
+    color: #098c3c;
     font-size: 70px;
     line-height: 70px;
     position: absolute;
@@ -1592,7 +1592,7 @@ button:focus {
 }
 .counter-item h3 {
     font-size: 40px;
-    color: #20bdd1;
+    color: #098c3c;
     margin-bottom: 5px;
     margin-top: -10px;
 }
@@ -1622,7 +1622,7 @@ img.mfp-img {
     font-size: 16px;
     border-radius: 50%;
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     position: absolute;
     top: 30px;
     right: 30px;
@@ -1638,7 +1638,7 @@ img.mfp-img {
     visibility: visible;
 }
 .shop-item .top {
-    background-color: #e1f4fa;
+    background-color: #a8dabb;
     padding: 30px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -1667,7 +1667,7 @@ img.mfp-img {
     height: 55px;
     text-align: center;
     border-radius: 5px;
-    color: #20bdd1;
+    color: #098c3c;
     background-color: #fff;
 }
 .shop-item .top ul li a i {
@@ -1675,14 +1675,14 @@ img.mfp-img {
 }
 .shop-item .top ul li a:hover {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .shop-item .bottom h3 {
     font-size: 22px;
     margin-bottom: 8px;
 }
 .shop-item .bottom h3 a {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .shop-item .bottom h3 a:hover {
     color: #02123a;
@@ -1692,7 +1692,7 @@ img.mfp-img {
     font-size: 16px;
 }
 .client-area {
-    background-color: #7adfed;
+    background-color: #a8dabb;
     position: relative;
 }
 .client-area .client-img img {
@@ -1704,7 +1704,7 @@ img.mfp-img {
     text-align: start;
 }
 .client-area .section-title .top .top-title {
-    color: #90e4ef;
+    color: #87c59f;
     opacity: 1;
 }
 .client-area .section-title .top .sub-title {
@@ -1792,7 +1792,7 @@ img.mfp-img {
     background-color: #e1f4fa;
 }
 .features-item:hover .features-btn {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .features-item span {
     display: inline-block;
@@ -1809,7 +1809,7 @@ img.mfp-img {
     text-align: center;
     line-height: 90px;
     font-size: 35px;
-    color: #20bdd1;
+    color: #098c3c;
     background-color: #fff;
     margin-bottom: 22px;
     border-radius: 5px;
@@ -1833,7 +1833,7 @@ img.mfp-img {
     font-size: 16px;
 }
 .appointment-area {
-    background-color: #e1f4fa;
+    background-color: #e1f5e9;
     position: relative;
     z-index: 1;
 }
@@ -1850,7 +1850,7 @@ img.mfp-img {
     right: 0;
 }
 .appointment-area .appointment-img {
-    background-image: url(../images/tilgangacover.jpg);
+    background-image: url(../images/contact.jpeg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1889,7 +1889,7 @@ img.mfp-img {
 }
 .appointment-area .appointment-content .form-group .form-control:focus {
     border: 0;
-    border-bottom: 1px solid #20bdd1;
+    border-bottom: 1px solid #098c3c;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -1907,7 +1907,7 @@ img.mfp-img {
 }
 .main-nav.two .side-nav .cart a span {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .main-nav.two .side-nav .social {
     margin-right: 0;
@@ -1996,7 +1996,7 @@ img.mfp-img {
 }
 .about-area.three .about-content .section-title p {
     margin-bottom: 0 !important;
-    border-left: 3px solid #20bdd1;
+    border-left: 3px solid #098c3c;
     padding-left: 15px;
 }
 .about-area.three .about-content p {
@@ -2016,7 +2016,7 @@ img.mfp-img {
     margin-right: 20px;
 }
 .about-area.three .about-content ul li:hover a i {
-    color: #20bdd1;
+    color: #098c3c;
     background-color: transparent;
 }
 .about-area.three .about-content ul li a {
@@ -2025,7 +2025,7 @@ img.mfp-img {
 }
 .about-area.three .about-content ul li a:hover i {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .about-area.three .about-content ul li a i {
     position: relative;
@@ -2034,10 +2034,10 @@ img.mfp-img {
     height: 70px;
     line-height: 68px;
     font-size: 45px;
-    color: #20bdd1;
+    color: #098c3c;
     background-color: transparent;
     border-radius: 50%;
-    border: 2px solid #20bdd1;
+    border: 2px solid #098c3c;
 }
 .about-area.three .about-content ul li span {
     display: inline-block;
@@ -2082,7 +2082,7 @@ img.mfp-img {
 }
 .features-area.two .features-item:hover i {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .services-area.three {
     background-color: #02123a;
@@ -2200,7 +2200,7 @@ img.mfp-img {
     text-align: center;
 }
 .faq-area .faq-item .accordion li .faq-head.active {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .faq-area .faq-item .accordion li .faq-head.active:after {
     content: "-";
@@ -2237,7 +2237,7 @@ img.mfp-img {
     font-weight: 600;
 }
 .faq-area .faq-item .accordion li .faq-content a:hover {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .pricing-item {
     margin-bottom: 30px;
@@ -2263,7 +2263,7 @@ img.mfp-img {
 }
 .pricing-item i {
     display: inline-block;
-    color: #20bdd1;
+    color: #098c3c;
     font-size: 65px;
     line-height: 65px;
     margin-bottom: 15px;
@@ -2289,10 +2289,10 @@ img.mfp-img {
 }
 .main-nav.three .side-nav .cart a span {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .title-bg-one {
-    background-image: url(../images/tilgangacover.jpg);
+    background-image: url(../images/contact.jpeg);
 }
 .page-title-area {
     background-size: cover;
@@ -2350,7 +2350,7 @@ img.mfp-img {
     color: #35405c;
 }
 .page-title-area .title-content ul li a:hover {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .page-title-area .title-content ul li span {
     display: block;
@@ -2366,7 +2366,7 @@ img.mfp-img {
     max-width: 650px;
 }
 .title-bg-two {
-    background-image: url(../images/tilgangacover.jpg);
+    background-image: url(../images/contact.jpeg);
 }
 .common-social {
     margin: 0;
@@ -2381,7 +2381,7 @@ img.mfp-img {
     display: block;
     border-radius: 5px;
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     width: 35px;
     height: 35px;
     text-align: center;
@@ -2416,7 +2416,7 @@ img.mfp-img {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 12px;
-    color: #20bdd1;
+    color: #098c3c;
 }
 .doctor-details-area .doctor-info .bottom p {
     margin-bottom: 22px;
@@ -2478,7 +2478,7 @@ img.mfp-img {
 }
 .doctor-details-area .details-content .inner i {
     display: inline-block;
-    color: #20bdd1;
+    color: #098c3c;
     font-size: 60px;
     line-height: 60px;
     position: absolute;
@@ -2493,7 +2493,7 @@ img.mfp-img {
     display: block;
     font-weight: 500;
     font-size: 16px;
-    color: #20bdd1;
+    color: #098c3c;
 }
 .doctor-details-area .details-content .list-service {
     margin-top: 25px;
@@ -2535,7 +2535,7 @@ img.mfp-img {
     transition: 0.5s;
 }
 .doctor-details-area .details-content .list-service ul li:hover:before {
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .common-doctor-contact {
     margin-bottom: 30px;
@@ -2554,7 +2554,7 @@ img.mfp-img {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     opacity: 0.95;
     z-index: -1;
 }
@@ -2570,7 +2570,7 @@ img.mfp-img {
     text-align: center;
     font-size: 35px;
     border-radius: 50%;
-    color: #20bdd1;
+    color: #098c3c;
     background-color: #fff;
     position: absolute;
     top: 5px;
@@ -2596,7 +2596,7 @@ img.mfp-img {
     margin-bottom: 20px;
 }
 .common-doctor-contact .common-btn {
-    color: #20bdd1;
+    color: #098c3c;
     background-color: #fff;
 }
 .common-doctor-contact .common-btn .one:before,
@@ -2608,7 +2608,7 @@ img.mfp-img {
     background-color: #02123a;
 }
 .title-bg-three {
-    background-image: url(../images/tilgangacover.jpg);
+    background-image: url(../images/contact.jpeg);
 }
 .service-details-area .details-item img {
     margin-bottom: 25px;
@@ -2647,7 +2647,7 @@ img.mfp-img {
     height: 10px;
     top: 8px;
     left: 0;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     border-radius: 50%;
 }
 .service-details-area .details-item ul li:last-child {
@@ -2672,7 +2672,7 @@ img.mfp-img {
     height: 3px;
     left: 0;
     bottom: 0;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .widget-area .categories ul {
     margin: 0;
@@ -2701,7 +2701,7 @@ img.mfp-img {
     height: 10px;
     top: 22px;
     left: 15px;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
@@ -2768,7 +2768,7 @@ img.mfp-img {
     padding: 30px 30px 30px 75px;
     margin-bottom: 0;
     position: relative;
-    border-bottom: 1px solid #20bdd1;
+    border-bottom: 1px solid #098c3c;
     margin-bottom: 30px;
 }
 .cart-area .cart-content p:before {
@@ -2778,7 +2778,7 @@ img.mfp-img {
     height: 30px;
     top: 32px;
     left: 30px;
-    border: 1px solid #20bdd1;
+    border: 1px solid #098c3c;
 }
 .checkout-area .top {
     margin-bottom: 30px;
@@ -2796,7 +2796,7 @@ img.mfp-img {
     margin-top: 3px;
 }
 .checkout-area .top .form-check .form-check-input:focus {
-    border-color: #20bdd1;
+    border-color: #098c3c;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -2805,7 +2805,7 @@ img.mfp-img {
 }
 .checkout-area .top .form-check .form-check-label a {
     display: inline-block;
-    color: #20bdd1;
+    color: #098c3c;
 }
 .checkout-area .top .form-check .form-check-label a:hover {
     color: #35405c;
@@ -2884,7 +2884,7 @@ img.mfp-img {
 }
 .wishlist-area .table thead tr {
     border: 0;
-    border-bottom: 2px solid #20bdd1;
+    border-bottom: 2px solid #098c3c;
 }
 .wishlist-area .table thead th {
     padding-top: 25px;
@@ -2898,7 +2898,7 @@ img.mfp-img {
 .wishlist-area .table tbody .trash {
     display: inline-block;
     font-size: 40px;
-    color: #20bdd1;
+    color: #098c3c;
     font-weight: 400;
 }
 .wishlist-area .table tbody .trash:hover {
@@ -2938,7 +2938,7 @@ img.mfp-img {
 }
 .shop-details-area .details-content h3 {
     font-size: 22px;
-    color: #20bdd1;
+    color: #098c3c;
     margin-bottom: 8px;
 }
 .shop-details-area .details-content p {
@@ -3029,7 +3029,7 @@ img.mfp-img {
     font-weight: 500;
 }
 .shop-details-area .details-content .social-links li a {
-    color: #20bdd1;
+    color: #098c3c;
     display: block;
 }
 .shop-details-area .details-content .social-links li a:hover {
@@ -3053,13 +3053,13 @@ img.mfp-img {
     font-weight: 700;
     padding-right: 25px;
     padding-left: 25px;
-    border-right: 1px solid #20bdd1;
+    border-right: 1px solid #098c3c;
     border-radius: 0;
     color: #02123a;
 }
 .shop-details-area .describe-area .nav-pills .nav-link.active,
 .shop-details-area .describe-area .nav-pills .show > .nav-link {
-    color: #20bdd1;
+    color: #098c3c;
     background-color: transparent;
 }
 .shop-details-area .describe-area .tab-content ul {
@@ -3092,7 +3092,7 @@ img.mfp-img {
     max-width: 870px;
 }
 .title-bg-four {
-    background-image: url(../images/tilgangacover.jpg);
+    background-image: url(../images/contact.jpeg);
 }
 .blog-details-area .details-item img {
     margin-bottom: 30px;
@@ -3109,7 +3109,7 @@ img.mfp-img {
     list-style-type: none;
     display: inline-block;
     margin-right: 15px;
-    color: #20bdd1;
+    color: #098c3c;
 }
 .blog-details-area .details-item h2 {
     font-size: 30px;
@@ -3121,13 +3121,13 @@ img.mfp-img {
 .blog-details-area .details-item blockquote {
     background-color: #edfafe;
     padding: 30px;
-    border-left: 2px solid #20bdd1;
+    border-left: 2px solid #098c3c;
     margin-top: 30px;
     margin-bottom: 25px;
 }
 .blog-details-area .details-item blockquote i {
     display: inline-block;
-    color: #20bdd1;
+    color: #098c3c;
     font-size: 40px;
     margin-bottom: 10px;
 }
@@ -3187,7 +3187,7 @@ img.mfp-img {
     color: #35405c;
 }
 .blog-details-area .details-item .tags .left ul li a:hover {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .blog-details-area .details-item .tags .right {
     text-align: end;
@@ -3212,7 +3212,7 @@ img.mfp-img {
 }
 .blog-details-area .details-item .tags .right ul li a {
     display: block;
-    color: #20bdd1;
+    color: #098c3c;
 }
 .blog-details-area .details-item .tags .right ul li a:hover {
     color: #02123a;
@@ -3240,7 +3240,7 @@ img.mfp-img {
     color: #35405c;
 }
 .blog-details-area .details-item .arrows a:hover {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .blog-details-area .details-item .comment h3 {
     font-size: 22px;
@@ -3315,7 +3315,7 @@ img.mfp-img {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     position: absolute;
     top: 0;
     right: 0;
@@ -3369,12 +3369,12 @@ img.mfp-img {
     margin-bottom: 5px;
 }
 .widget-area .post .inner ul li a:hover {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .widget-area .post .inner ul li span {
     display: block;
     font-size: 15px;
-    color: #20bdd1;
+    color: #098c3c;
     position: relative;
     padding-left: 15px;
 }
@@ -3385,7 +3385,7 @@ img.mfp-img {
     height: 8px;
     left: 0;
     top: 7px;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     border-radius: 50%;
 }
 .widget-area .tags {
@@ -3416,7 +3416,7 @@ img.mfp-img {
 }
 .widget-area .tags ul li a:hover {
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
 }
 .widget-area .common-doctor-contact.two:before {
     background-color: #02123a;
@@ -3436,8 +3436,8 @@ img.mfp-img {
     line-height: 70px;
     font-size: 30px;
     border-radius: 50%;
-    color: #20bdd1;
-    border: 1px solid #20bdd1;
+    color: #098c3c;
+    border: 1px solid #098c3c;
     margin-bottom: 20px;
 }
 .contact-info-item h3 {
@@ -3449,7 +3449,7 @@ img.mfp-img {
     color: #35405c;
 }
 .contact-info-item a:hover {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .contact-area .map-item {
     margin-bottom: 30px;
@@ -3496,7 +3496,7 @@ img.mfp-img {
 }
 .contact-area #contactform .form-check a {
     display: inline-block;
-    color: #20bdd1;
+    color: #098c3c;
     font-weight: 500;
 }
 .contact-area #contactform .form-check a:hover {
@@ -3551,7 +3551,7 @@ img.mfp-img {
 }
 .account-area .account-item .nav-pills .nav-link.active,
 .account-area .account-item .nav-pills .nav-pills .show > .nav-link {
-    color: #20bdd1;
+    color: #098c3c;
     background-color: transparent;
 }
 .account-area .account-item .form-group {
@@ -3591,7 +3591,7 @@ img.mfp-img {
     display: block;
 }
 .account-area .account-item a:hover {
-    color: #20bdd1;
+    color: #098c3c;
 }
 .appointment-area.two {
     background-color: #fff;
@@ -3641,13 +3641,13 @@ img.mfp-img {
     text-align: center;
 }
 .error-area .error-content i {
-    color: #20bdd1;
+    color: #098c3c;
     display: inline-block;
     font-size: 100px;
 }
 .error-area .error-content h1 {
     font-size: 130px;
-    color: #20bdd1;
+    color: #098c3c;
     margin-bottom: 20px;
 }
 .error-area .error-content h2 {
@@ -3728,7 +3728,7 @@ img.mfp-img {
     display: block;
     font-weight: 500;
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     border-radius: 5px;
     padding: 4px 12px;
     font-size: 16px;
@@ -3744,7 +3744,7 @@ img.mfp-img {
     bottom: 30px;
     right: 0;
     color: #fff;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     z-index: 4;
     width: 45px;
     text-align: center;
@@ -3754,7 +3754,7 @@ img.mfp-img {
     -webkit-transition: 0.9s;
     transition: 0.9s;
     border-radius: 50%;
-    border: 1px solid #20bdd1;
+    border: 1px solid #098c3c;
 }
 .go-top i {
     position: absolute;
@@ -3819,7 +3819,7 @@ img.mfp-img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #20bdd1;
+    background-color: #098c3c;
     opacity: 0.6;
     position: absolute;
     top: 0;
@@ -4048,7 +4048,7 @@ img.mfp-img {
     font-size: 58px;
     line-height: 66px;
     padding-bottom: 10px;
-    color: #00cfe6;
+    color: #098c3c;
 }
 #main-slider figcaption .slider-info p{
     color: #fff;
@@ -4239,7 +4239,7 @@ img.mfp-img {
     justify-content: center;
 }
 .services-item .service-btn a{
-    color: #20bdd1;
+    color: #098c3c;
 
 }
 
@@ -4280,4 +4280,37 @@ img.mfp-img {
     object-fit: cover;
     border-radius: 5px;
 }
-  
+ 
+.services-area .inner-notice{
+    display: flex;
+ 
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid #eee;
+    margin-top: 1.5rem;
+}
+.services-area .inner-notice-date{
+    background-color: #098c3c;
+    padding: 2px 8px;
+    color: #fff;
+    border-radius: 5px;
+}
+.services-area .title{
+    border-bottom: 2px solid #098c3c;
+}
+.services-area .column{
+    height: 270px;
+    overflow-y: auto;
+}
+.services-area .column::-webkit-scrollbar {
+    width: 6px;
+}
+
+.services-area .column::-webkit-scrollbar-thumb {
+    background-color: #098c3c; /* Color of the thumb */
+    border-radius: 4px;
+}
+
+.services-area .column::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the track */
+}

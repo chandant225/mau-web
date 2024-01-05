@@ -42,7 +42,35 @@
                                 @enderror
                             </span>
                         </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputFile">Choose category</label>
+                            <div class="input-group">
+                                <select id="selectCategory" name="category" class="form-control">
+                                    <option value="news">News & Announcements</option>
+                                    <option value="events">Upcoming Events</option>
+                                    <option value="results">Examinations & Results</option>
+                                </select>
+                            </div>
+                            <span class="text-danger">
+                                @error('category')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
                        
+                        <label for="pdf_file">PDF File</label>
+                        <div class="input-group">
+                            <div>
+                                <input type="file" name="pdf_file" id="pdf_file_input" onchange="updateFileNameLabel()" />
+                            </div>
+                        </div>
+                        <span class="text-danger">
+                            @error('pdf_file')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                         <div class="form-group">
                             <label for="exampleInputFile">File input</label>
                             <div class="input-group">
@@ -96,5 +124,17 @@
             filebrowserUploadUrl: "{{ route('admin.service.editor.upload', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form'
         })
+    </script>
+     <script>
+        function updateFileNameLabel() {
+            var input = document.getElementById('pdf_file_input');
+            var label = document.querySelector('.custom-file-label');
+            var fileName = input.files[0].name;
+            label.innerHTML = fileName;
+
+            // Display the file name in a separate span
+            var fileNameSpan = document.getElementById('pdf_file_name');
+            fileNameSpan.innerHTML = 'Selected PDF File: ' + fileName;
+        }
     </script>
 @endpush

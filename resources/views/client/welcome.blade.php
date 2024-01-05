@@ -96,45 +96,54 @@
         <div class="container">
             <div class="section-title">
                 <div class="top">
-                    <span class="top-title">Services</span>
-                    <span class="sub-title">Services</span>
+                    <span class="top-title">Notices</span>
+                    <span class="sub-title">Notices</span>
                 </div>
-                <h2>Refractive Surgery Unit</h2>
             </div>
-            <div class="row justify-content-center">
-                @foreach ($services as $service)
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="services-item">
-                            <div class="top">
-                                <a href="{{ route('service.details', ['slug' => $service->slug]) }}">
-                                    <img src="{{ env('APP_URL') . '/uploads/service/' . $service->filename }}"
-                                        alt="">
-                                </a>
-                            </div>
-                            <div class="bottom">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <i class="flaticon-lasik icon"></i>
-                                <h3>
-                                    <a
-                                        href="{{ route('service.details', ['slug' => $service->slug]) }}">{{ $service->title }}</a>
-                                </h3>
-                                <p>
-                                    {!! Str::words($service->description, 8, ' ...') !!}
-                                </p>
-                                <div class="service-btn">
-                                    <a href="{{ route('service.details', ['slug' => $service->slug]) }}">
-                                        More Details
-                                        <i class="bx bx-plus"></i>
-                                    </a>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <h3 class="title">News & Announcements</h3>
+                    <div class="column">
+                        @foreach($news as $service)
+                            <div class="inner-notice">
+                                <div class="inner-notice-date">
+                                    <p>{{ $service->created_at->format('j M') }}</p>
                                 </div>
+                                <p>{{ $service->title }}</p>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
-                @endforeach
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="title">Upcoming Events</h3>
+                    <div class="column">
+                        @foreach($events as $service)
+                            <div class="inner-notice">
+                                <div class="inner-notice-date">
+                                    <p>{{ $service->created_at->format('j M') }}</p>
+                                </div>
+                                <p>{{ $service->title }}</p>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="title">Examinations & Results</h3>
+                    <div class="column">
+                        @foreach($results as $service)
+                            <div class="inner-notice">
+                                <div class="inner-notice-date">
+                                    <p>{{ $service->created_at->format('j M') }}</p>
+                                </div>
+                                <p>{{ $service->title }}</p>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </section>
 
@@ -235,75 +244,6 @@
         </div>
     </section>
 
-    <div class="appointment-area">
-        <div class="appointment-shape">
-            <img src="assets/images/appointment-shape1.png" alt="Shape">
-            <img src="assets/images/appointment-shape2.png" alt="Shape">
-        </div>
-        <div class="container-fluid p-0">
-            <div class="row m-0">
-                <div class="col-lg-6 p-0">
-                    <div class="appointment-img">
-                        <img src="assets/images/tilgangacover.jpg" alt="Appointment">
-                    </div>
-                </div>
-                <div class="col-lg-6 p-0">
-                    <div class="appointment-content">
-                        <h3>Book An Appointment</h3>
-                        <form method="POST" action="{{ route('appointment') }}">
-                            @csrf
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input type="text" name="fullName" class="form-control"
-                                            placeholder="Your Name">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input type="email" name="email" class="form-control"
-                                            placeholder="Your Email">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input type="text" name="phone" class="form-control"
-                                            placeholder="Your Phone">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input type="time" name="time" class="form-control"
-                                            placeholder="Your Time" min="08:00" max="14:00"
-                                            onchange="handleTime()">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input id="datetime" name="date" type="date" class="form-control"
-                                            placeholder="Appointment Date" onchange="disableSaturdays()">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <textarea id="your-message" name="message" rows="8" class="form-control" placeholder="Write Message"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <button type="submit" class="btn common-btn">
-                                        Get An Appointment
-                                        <span class="one"></span>
-                                        <span class="two"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <section class="blog-area pt-100 pb-70">
         <div class="container">
@@ -384,6 +324,76 @@
             </div>
         </div>
     </section>
+
+    
+    <div class="appointment-area">
+  
+        <div class="container-fluid p-0">
+            <div class="row m-0">
+                <div class="col-lg-6 p-0">
+                    <div class="appointment-img">
+                        <img src="assets/images/contact.jpeg" alt="Appointment">
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="appointment-content">
+                        <form id="contactform" method="post" action="{{ route('contact.store') }}">
+                            @csrf
+                            <h3>Contact With Us!</h3>
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="firstName" id="firstName" class="form-control"
+                                            placeholder="First Name" required data-error="Please enter your first name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="lastName" id="lastName" class="form-control"
+                                            placeholder="Last Name" required data-error="Please enter your last name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" class="form-control"
+                                            placeholder="Email" required data-error="Please enter your email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="phone" id="phone_number" placeholder="Phone" required
+                                            data-error="Please enter your number" class="form-control">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="8" placeholder="Write message"
+                                            required data-error="Write your message"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="text-center">
+                                        <button type="submit" class="btn common-btn">
+                                            <span class="one"></span>
+                                            <span class="two"></span>
+                                            Send Message
+                                        </button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection
 @push('scripts')

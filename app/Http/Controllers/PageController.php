@@ -23,14 +23,16 @@ class PageController extends Controller
     public function home(){
         $teams = Team::orderBy('position', 'asc')->get();
         $sliders = Slider::all();
-        $services = Service::take(3)->get();
+        $news = Service::where('category', 'news')->take(6)->get();
+        $events = Service::where('category', 'events')->take(6)->get();
+        $results = Service::where('category', 'results')->take(6)->get();
         $testimonials = Testimonial::all();
         $blogs = Blog::all();
         $counters = Counter::all();
         $abouts = About::all();
         $faqs = Faq::orderBy('updated_at','desc')->get();
         $metatag = MetaTags::where('page','home_page')->get()->first();
-        return view('client.welcome',compact('sliders','services','teams','testimonials','blogs','metatag','counters','abouts','faqs'));
+        return view('client.welcome',compact('sliders','news','events','results','teams','testimonials','blogs','metatag','counters','abouts','faqs'));
     }
 
     public function about(){
