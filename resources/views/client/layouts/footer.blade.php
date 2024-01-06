@@ -162,16 +162,15 @@
             <div class="col-lg-6">
                 <p>
                     Copyright @
-                    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
                     <script>
                         document.write(new Date().getFullYear());
                     </script>
-                    outofboxdesign
+                    MAU
                     {{-- Designed By
                     <a href="https://outofboxdesign.com/" target="_blank">outofboxdesign</a> --}}
                 </p>
             </div>
-            <div class="col-lg-6">
+            {{-- <div class="col-lg-6">
                 <ul>
                     <li>
                         <a href="{{ route('terms') }}">Terms & Conditions</a>
@@ -180,7 +179,7 @@
                         <a href="{{ route('privacy') }}">Privacy Policy</a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
