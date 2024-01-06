@@ -105,39 +105,45 @@
                 <div class="col-lg-4">
                     <h3 class="title">News & Announcements</h3>
                     <div class="column">
-                        @foreach($news as $service)
+                        @foreach ($news as $service)
+                        <a href="/service/{{ $service->slug }}">
                             <div class="inner-notice">
                                 <div class="inner-notice-date">
                                     <p>{{ $service->created_at->format('j M') }}</p>
                                 </div>
                                 <p>{{ $service->title }}</p>
                             </div>
+                            <a href="/service/{{ $service->slug }}">
                         @endforeach
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <h3 class="title">Upcoming Events</h3>
                     <div class="column">
-                        @foreach($events as $service)
+                        @foreach ($events as $service)
+                        <a href="/service/{{ $service->slug }}">
                             <div class="inner-notice">
                                 <div class="inner-notice-date">
                                     <p>{{ $service->created_at->format('j M') }}</p>
                                 </div>
                                 <p>{{ $service->title }}</p>
                             </div>
+                            <a href="/service/{{ $service->slug }}">
                         @endforeach
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <h3 class="title">Examinations & Results</h3>
                     <div class="column">
-                        @foreach($results as $service)
-                            <div class="inner-notice">
-                                <div class="inner-notice-date">
-                                    <p>{{ $service->created_at->format('j M') }}</p>
+                        @foreach ($results as $service)
+                            <a href="/service/{{ $service->slug }}">
+                                <div class="inner-notice">
+                                    <div class="inner-notice-date">
+                                        <p>{{ $service->created_at->format('j M') }}</p>
+                                    </div>
+                                    <p>{{ $service->title }}</p>
                                 </div>
-                                <p>{{ $service->title }}</p>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
@@ -325,9 +331,9 @@
         </div>
     </section>
 
-    
+
     <div class="appointment-area">
-  
+
         <div class="container-fluid p-0">
             <div class="row m-0">
                 <div class="col-lg-6 p-0">
@@ -364,15 +370,15 @@
                                 </div>
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="form-group">
-                                        <input type="text" name="phone" id="phone_number" placeholder="Phone" required
-                                            data-error="Please enter your number" class="form-control">
+                                        <input type="text" name="phone" id="phone_number" placeholder="Phone"
+                                            required data-error="Please enter your number" class="form-control">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="8" placeholder="Write message"
-                                            required data-error="Write your message"></textarea>
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="8"
+                                            placeholder="Write message" required data-error="Write your message"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -388,7 +394,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </form> 
+                        </form>
                     </div>
                 </div>
             </div>
