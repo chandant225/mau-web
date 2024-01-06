@@ -29,7 +29,7 @@
                                 <a href="{{ route('home') }}">Home</a>
                             </li>
                             <li>
-                                <span>Service Details</span>
+                                <span>Notice Details</span>
                             </li>
                         </ul>
                     </div>
@@ -60,7 +60,7 @@
                 <div class="col-lg-4">
                     <div class="widget-area">
                         <div class="categories widget-item">
-                            <h3>Categories</h3>
+                            <h3>Notices</h3>
                             <ul>
                                 @foreach ($services as $service)
                                     <li>

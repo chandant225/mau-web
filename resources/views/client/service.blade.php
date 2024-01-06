@@ -16,13 +16,13 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="title-content">
-                        <h2>Services</h2>
+                        <h2>Notices</h2>
                         <ul>
                             <li>
                                 <a href="{{route('home')}}">Home</a>
                             </li>
                             <li>
-                                <span>Services</span>
+                                <span>Notices</span>
                             </li>
                         </ul>
                     </div>
@@ -36,10 +36,10 @@
         <div class="container">
             <div class="section-title">
                 <div class="top">
-                    <span class="top-title">Services</span>
-                    <span class="sub-title">Services</span>
+                    <span class="top-title">Notices</span>
+                    <span class="sub-title">Notices</span>
                 </div>
-                <h2>Eye Care Services</h2>
+                
             </div>
             <div class="row justify-content-center">
                 @foreach ($services as $service)
