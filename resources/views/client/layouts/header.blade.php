@@ -47,7 +47,6 @@
                     style="
           height: 60px;" alt="Logo" />
             </a>
-            <a  class="logo" href="/">Madhesh Agricultural University</a>
         </div>
     @endif
     <div class="main-nav">
