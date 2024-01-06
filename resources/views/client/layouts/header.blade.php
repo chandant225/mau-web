@@ -3,7 +3,7 @@
         <div class="row align-items-center justify-content-center">
             @if (isset($profile))
                 <div class="col-sm-2 col-lg-2">
-                    <div class="left d-flex">
+                    <div class="left">
                         <a href="{{ route('home') }}">
                             <img src=" {{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}"
                                 class="left-logo1" style="background: #0098a8; height:60px;" alt="Logo" />
@@ -47,7 +47,7 @@
                     style="
           height: 60px;" alt="Logo" />
             </a>
-            <a href="/">Madhesh Agricultural University</a>
+            <a style="margin-top: 5rem; z-index: 999; padding-left: 1rem;" href="/">Madhesh Agricultural University</a>
         </div>
     @endif
     <div class="main-nav">
