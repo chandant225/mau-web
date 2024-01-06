@@ -33,13 +33,13 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="title-content">
-                        <h2>Team Details</h2>
+                        <h2>Official Details</h2>
                         <ul>
                             <li>
                                 <a href="{{route('home')}}">Home</a>
                             </li>
                             <li>
-                                <span>Team Details</span>
+                                <span>Official Details</span>
                             </li>
                         </ul>
                     </div>

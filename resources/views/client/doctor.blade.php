@@ -26,13 +26,13 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="title-content">
-                        <h2>Teams</h2>
+                        <h2>Officials</h2>
                         <ul>
                             <li>
                                 <a href="{{route('home')}}">Home</a>
                             </li>
                             <li>
-                                <span>Teams</span>
+                                <span>Officials</span>
                             </li>
                         </ul>
                     </div>
@@ -46,10 +46,10 @@
         <div class="container">
             <div class="section-title">
                 <div class="top">
-                    <span class="top-title">Teams</span>
-                    <span class="sub-title">Teams</span>
+                    <span class="top-title">Officials</span>
+                    <span class="sub-title">Officials</span>
                 </div>
-                <h2>Refractive Surgery unit</h2>
+                <h2>Officials</h2>
             </div>
             <div class="row">
               @foreach ($teams as $team)

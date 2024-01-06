@@ -151,10 +151,10 @@
         <div class="container">
             <div class="section-title">
                 <div class="top">
-                    <span class="top-title">Teams</span>
-                    <span class="sub-title">Teams</span>
+                    <span class="top-title">Officials</span>
+                    <span class="sub-title">Officials</span>
                 </div>
-                <h2>Eye Care Specialist</h2>
+                <h2>Officials</h2>
             </div>
             <div class="row justify-content-center">
                 @foreach ($teams as $team)
@@ -210,7 +210,7 @@
         </div>
     </div>
 
-    <section class="client-area ptb-100">
+    {{-- <section class="client-area ptb-100">
         <div class="container">
             <div class="section-title">
                 <div class="top">
@@ -242,7 +242,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     <section class="blog-area pt-100 pb-70">
