@@ -136,10 +136,7 @@
                                 <a href="{{ route('about') }}">About</a>
                             </li>
                             <li>
-                                <a href="{{ route('doctors') }}">Doctors</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('services') }}">Services</a>
+                                <a href="{{ route('doctors') }}">Officials</a>
                             </li>
                             <li>
                                 <a href="{{ route('blogs') }}">News & Update</a>
