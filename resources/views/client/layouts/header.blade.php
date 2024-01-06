@@ -61,10 +61,10 @@
                             <a href="{{route('about')}}" class="nav-link">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('services')}}" class="nav-link dropdown-toggle">Services </a>
+                            <a href="{{route('services')}}" class="nav-link dropdown-toggle">Notices and events </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('doctors')}}" class="nav-link dropdown-toggle">Teams </a>
+                            <a href="{{route('doctors')}}" class="nav-link dropdown-toggle">Officials </a>
                         </li>
 
                         <li class="nav-item">
