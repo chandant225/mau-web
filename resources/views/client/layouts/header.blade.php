@@ -3,7 +3,7 @@
         <div class="row align-items-center justify-content-center">
             @if (isset($profile))
                 <div class="col-sm-2 col-lg-2">
-                    <div class="left">
+                    <div class="left d-flex">
                         <a href="{{ route('home') }}">
                             <img src=" {{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}"
                                 class="left-logo1" style="background: #0098a8; height:60px;" alt="Logo" />
@@ -38,7 +38,7 @@
 
 <div class="navbar-area sticky-top">
     @if (isset($profile))
-        <div class="mobile-nav">
+        <div class="mobile-nav d-flex">
             <a href="{{ route('home') }}" class="logo">
                 <img src="{{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}"
                     style="background: #0098a8;
