@@ -47,7 +47,7 @@
                             alt="Post Operative Lasik Care" />
                         <h2>{{ $service->title }}</h2>
                         @if ($service->pdf_file)
-                            <a href="{{ env('APP_URL') . '/' . $service->pdf_file }}" target="_blank">
+                            <a href="{{ env('APP_URL') . $service->pdf_file }}" target="_blank">
                                 View PDF
                             </a>
                         @else
