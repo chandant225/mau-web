@@ -71,56 +71,7 @@
                             </ul>
                         </div>
 
-                        <div class="consult widget-item">
-                            <h3>Get A Consult</h3>
-                            <form method="POST" action="{{ route('appointment') }}">
-                                @csrf
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <input type="text" name="fullName" class="form-control"
-                                                placeholder="Your Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <input type="email" name="email" class="form-control"
-                                                placeholder="Your Email">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <input type="text" name="phone" class="form-control"
-                                                placeholder="Your Phone">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <input type="time" name="time" class="form-control"
-                                                placeholder="Your Time">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <input id="datetimepicker" name="date" type="text" class="form-control"
-                                                placeholder="Appointment Date">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <textarea id="your-message" name="message" rows="8" class="form-control" placeholder="Write Message"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <button type="submit" class="btn common-btn">
-                                            Get An Appointment
-                                            <span class="one"></span>
-                                            <span class="two"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                  
                     </div>
                 </div>
             </div>

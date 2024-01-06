@@ -10,6 +10,7 @@
                             <img src=" {{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}"
                                 class="left-logo2" style="height: 60px" alt="Logo" />
                         </a>
+                        <a href="/">Madhesh Agricultural University</a>
                     </div>
 
                 </div>
@@ -46,8 +47,8 @@
                     style="
           height: 60px;" alt="Logo" />
             </a>
+            <a href="/">Madhesh Agricultural University</a>
         </div>
-        <p>Madhesh Agricultural University</p>
     @endif
     <div class="main-nav">
         <div class="container">
