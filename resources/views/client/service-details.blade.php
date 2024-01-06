@@ -46,6 +46,8 @@
                         <img class="pb-2" src="{{ env('APP_URL') . '/uploads/service/' . $service->filename }}"
                             alt="Post Operative Lasik Care" />
                         <h2>{{ $service->title }}</h2>
+
+                        <p>{!! $service->description !!}</p>
                         @if ($service->pdf_file)
                             <a href="{{ env('APP_URL') . $service->pdf_file }}" target="_blank">
                                 View PDF
@@ -53,7 +55,6 @@
                         @else
                             No PDF available
                         @endif
-                        <p>{!! $service->description !!}</p>
                     </div>
                 </div>
                 <div class="col-lg-4">

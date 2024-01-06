@@ -39,12 +39,15 @@
     @if (isset($profile))
         <div class="mobile-nav">
             <a href="{{ route('home') }}" class="logo">
+                <img src="{{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}"
+                    style="background: #0098a8;
+        height: 60px;" class="mobile-logo1" alt="Logo" />
                 <img src="{{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}" class="mobile-logo2"
                     style="
           height: 60px;" alt="Logo" />
-                <h4>Madhesh Agricultural University</h4>
             </a>
         </div>
+        <p>Madhesh Agricultural University</p>
     @endif
     <div class="main-nav">
         <div class="container">
