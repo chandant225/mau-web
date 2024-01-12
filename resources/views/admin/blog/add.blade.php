@@ -34,6 +34,32 @@
                             </span>
                         </div>
                         <div class="form-group">
+                            <label for="department">Select Department:</label>
+                            <select id="department" name="department">
+                                <option value="vision">Vision</option>
+                                <option value="mission">Mission</option>
+                                <option value="goal">Goal</option>
+                                <option value="objective">Objective</option>
+                                <option value="office_of_the_vice_chancellor">Office of the Vice-Chancellor</option>
+                                <option value="office_of_the_register">Office of the Register</option>
+                                <option value="office_of_the_finance">Office of the Finance</option>
+                                <option value="academic">Academic</option>
+                                <option value="research">Research</option>
+                                <option value="development">Development</option>
+                                <option value="laboratory">Laboratory</option>
+                                <option value="classroom">Classroom</option>
+                                <option value="lab">Lab</option>
+                                <option value="library">Library</option>
+                                <option value="hostel">Hostel</option>
+                                <option value="sports_background">Sports & Background</option>
+                                <option value="playground">Playground</option>
+                                <option value="journal">Journal</option>
+                                <option value="books">Books</option>
+                                <option value="reports">Reports</option>
+                                <option value="documentary">Documentary</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="description">Description</label>
                             <textarea class="form-control" id="description" placeholder="Enter the Description" name="description"></textarea>
                             <span class="text-danger">

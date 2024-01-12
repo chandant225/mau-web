@@ -6,15 +6,18 @@
                     <div class="left">
                         <a href="{{ route('home') }}">
                             <img src=" {{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}"
-                                class="left-logo1" style="background: #0098a8; height:60px;" alt="Logo" />
-                            <img src=" {{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}"
-                                class="left-logo2" style="height: 60px" alt="Logo" />
+                                class="left-logo1" style="background: #0098a8; height:6rem;" alt="Logo" />
+                            {{-- <img src=" {{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}"
+                                class="left-logo2" style="height: 60px" alt="Logo" /> --}}
                         </a>
-                        <a href="/">Madhesh Agricultural University</a>
                     </div>
 
                 </div>
-                <div class="col-sm-10 col-lg-10">
+                <div class="col-lg-6 logo-title">
+                    <h2>MADHESH AGRICULTURAL UNIVERSITY</h2>
+                    <h5>Rajbiraj-3, Saptari, Madhesh Province, Nepal</h5>
+                </div>
+                <div class="col-sm-10 col-lg-4">
                     <div class="right">
                         <ul>
                             <li>
@@ -57,50 +60,93 @@
                         <li class="nav-item">
                             <a href="{{ route('home') }}" class="nav-link dropdown-toggle active">Home </a>
                         </li>
+
                         <li class="nav-item">
-                            <a href="{{ route('about') }}" class="nav-link">About Us</a>
+                            <div class="dropdown dropdown-toggle">
+                                <a href="{{route('about')}}" class="nav-link">
+                                    About Us
+                                </a>
+                                <div class="dropdown-content">
+                                    <a href="/department/vision">Vision</a>
+                                    <a href="/department/mission">Mission</a>
+                                    <a href="/department/goal">Goal</a>
+                                    <a href="/department/objective">Objective</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <div class="dropdown dropdown-toggle">
+                                <a href="#" class="nav-link">
+                                    Administration
+                                </a>
+                                <div class="dropdown-content">
+                                    <a href="/department/office_of_the_vice_chancellor">Office of the Vice-Chancellor</a>
+                                    <a href="/department/office_of_the_register">Office of the Registrar</a>
+                                    <a href="/department/office_of_the_finance">Office of the Finance</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <div class="dropdown dropdown-toggle">
+                                <a href="#" class="nav-link">
+                                    Program
+                                </a>
+                                <div class="dropdown-content">
+                                    <a href="/department/academic">Academic</a>
+                                    <a href="/department/research">Research</a>
+                                    <a href="/department/development">Development</a>
+                                    <a href="/department/laboratory">Laboratory</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <div class="dropdown dropdown-toggle">
+                                <a href="#" class="nav-link">
+                                    Our Faculties
+                                </a>
+                                <div class="dropdown-content">
+                                    <a href="/department/classroom">Classroom </a>
+                                    <a href="/department/lab">Lab</a>
+                                    <a href="/department/library">Library</a>
+                                    <a href="/department/hostel">Hostel</a>
+                                    <a href="/department/sports_background">Sports & Background</a>
+                                    <a href="/department/playground">Playground</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <div class="dropdown dropdown-toggle">
+                                <a href="#" class="nav-link">
+                                    Publication
+                                </a>
+                                <div class="dropdown-content">
+                                    <a href="/department/journal">Journal </a>
+                                    <a href="/department/books">Books</a>
+                                    <a href="/department/reports">Report</a>
+                                    <a href="/department/documentary">Documentary</a>
+                                    
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('services') }}" class="nav-link dropdown-toggle">Notices and events </a>
+                            <a href="#" class="nav-link dropdown-toggle">Act/Plan & Policy</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('doctors') }}" class="nav-link dropdown-toggle">Officials </a>
+                            <a href="#" class="nav-link dropdown-toggle">Announcement </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ route('blogs') }}" class="nav-link dropdown-toggle">News & Update </a>
+                            <a href="{{ route('blogs') }}" class="nav-link dropdown-toggle">Event & Activity </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('gallery') }}" class="nav-link dropdown-toggle">Gallery </a>
 
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('contact') }}" class="nav-link">Contact</a>
+                            <a href="{{ route('contact') }}" class="nav-link">Contact Us</a>
                         </li>
                     </ul>
-                    <div class="side-nav">
-
-                        <div class="social">
-                            <ul>
-                                <li>
-                                    <a href="https://www.facebook.com/tilgangainstituteofophthalmology" target="_blank">
-                                        <i class="bx bxl-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/tilgangao?lang=en" target="_blank">
-                                        <i class="bx bxl-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://rsu.tilganga.org/www.linkdin.com" target="_blank">
-                                        <i class="bx bxl-linkedin"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
+                   
                 </div>
             </nav>
         </div>

@@ -33,6 +33,7 @@
                                 @enderror
                             </span>
                         </div>
+                 
                         <div class="form-group">
                             <label for="description">Description</label>
                             <textarea class="form-control" id="description" placeholder="Enter the Description" name="description"></textarea>
@@ -42,6 +43,7 @@
                                 @enderror
                             </span>
                         </div>
+
                     </div>
                     <!-- /.card-body -->
 
