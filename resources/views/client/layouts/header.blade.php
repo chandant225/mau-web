@@ -44,14 +44,16 @@
         <div class="mobile-nav d-flex">
             <a href="{{ route('home') }}" class="logo">
                 <img src="{{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}"
-                    style="background: #0098a8;
-        height: 60px;" class="mobile-logo1" alt="Logo" />
-                <img src="{{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}" class="mobile-logo2"
-                    style="
-          height: 60px;" alt="Logo" />
+                    style="height: 75px;" class="mobile-logo1" alt="Logo" />
+              
             </a>
         </div>
+      
     @endif
+    <div class=" mob-logo-title">
+        <h2>MADHESH AGRICULTURAL<br> UNIVERSITY</h2>
+        <h5>Rajbiraj-3, Saptari,<br> Madhesh Province, Nepal</h5>
+    </div>
     <div class="main-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
