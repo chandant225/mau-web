@@ -17,13 +17,13 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug')->unique();
-            $table->longText('description');
-            $table->string('category'); 
+            $table->longText('description')->nullable();
+            $table->string('category')->nullable(); 
             $table->string('pdf_file')->nullable();
-            $table->string('meta_title');
-            $table->longText('meta_description');
-            $table->longText('meta_keywords');
-            $table->string('filename');
+            $table->string('meta_title')->nullable();
+            $table->longText('meta_description')->nullable();
+            $table->longText('meta_keywords')->nullable();
+            $table->string('filename')->nullable();
             $table->timestamps();
         });
     }

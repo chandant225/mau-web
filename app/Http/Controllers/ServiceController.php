@@ -40,16 +40,9 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'category' => 'required',
-            'pdf_file' => 'required|mimes:pdf|max:2048',
-        ]);
 
         $slug = Str::slug($request->title, '-');
 
-        if ($request->hasFile('image') && $request->hasFile('pdf_file')) {
             $name = $request->file('image')->getClientOriginalName();
             $request->file('image')->move(public_path() . '/uploads/service', $name);
 
@@ -73,9 +66,7 @@ class ServiceController extends Controller
             } else {
                 return back()->with('error', 'something went wrong');
             }
-        } else {
-            return back()->with('error', 'please choose an image');
-        }
+       
     }
 
     /**
