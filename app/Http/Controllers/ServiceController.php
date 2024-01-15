@@ -67,7 +67,7 @@ class ServiceController extends Controller
             $service->meta_title = $request->meta_title;
             $service->meta_description = $request->meta_description;
             $service->meta_keywords = $request->meta_keywords;
-            $service->filename = $name;
+            $service->filename = $this->name;
             $save_service = $service->save();
             if ($save_service) {
                 return redirect()->route('admin.service.list')->with('success', 'service has been added successfully.');
