@@ -42,13 +42,17 @@ class ServiceController extends Controller
     {
 
         $slug = Str::slug($request->title, '-');
-
-            $name = $request->file('image')->getClientOriginalName();
-            $request->file('image')->move(public_path() . '/uploads/service', $name);
-
-            $pdfName = $request->file('pdf_file')->getClientOriginalName();
-            $request->file('pdf_file')->move(public_path() . '/uploads/service/pdf', $pdfName);
-            $pdfFilePath = '/uploads/service/pdf/' . $pdfName;
+        
+            if($request->file('image')){
+                $name = $request->file('image')->getClientOriginalName();
+                $request->file('image')->move(public_path() . '/uploads/service', $name);
+            }
+             if($request->file('pdf_file')){
+                $pdfName = $request->file('pdf_file')->getClientOriginalName();
+                $request->file('pdf_file')->move(public_path() . '/uploads/service/pdf', $pdfName);
+                $pdfFilePath = '/uploads/service/pdf/' . $pdfName;
+             }
+          
 
             $service = new Service();
             $service->title = $request->title;
