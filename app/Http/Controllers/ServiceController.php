@@ -14,6 +14,8 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public $pdfFilePath;
+    public $name;
     public function index()
     {
         $services = Service::orderBy('created_at', 'desc')->get();
@@ -42,15 +44,17 @@ class ServiceController extends Controller
     {
 
         $slug = Str::slug($request->title, '-');
-        
+
             if($request->file('image')){
-                $name = $request->file('image')->getClientOriginalName();
-                $request->file('image')->move(public_path() . '/uploads/service', $name);
+                $this->name = $request->file('image')->getClientOriginalName();
+                $request->file('image')->move(public_path() . '/uploads/service', $this->name);
             }
-             if($request->file('pdf_file')){
+
+
+            if($request->file('pdf_file')){
                 $pdfName = $request->file('pdf_file')->getClientOriginalName();
                 $request->file('pdf_file')->move(public_path() . '/uploads/service/pdf', $pdfName);
-                $pdfFilePath = '/uploads/service/pdf/' . $pdfName;
+                $this->pdfFilePath = '/uploads/service/pdf/' . $pdfName;
              }
           
 
@@ -59,7 +63,7 @@ class ServiceController extends Controller
             $service->slug = $slug;
             $service->description = $request->description;
             $service->category = $request->category;
-            $service->pdf_file = $pdfFilePath;
+            $service->pdf_file = $this->pdfFilePath;
             $service->meta_title = $request->meta_title;
             $service->meta_description = $request->meta_description;
             $service->meta_keywords = $request->meta_keywords;
