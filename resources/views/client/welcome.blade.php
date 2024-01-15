@@ -60,7 +60,6 @@
         </div>
         <div class="container">
             <div class="row align-items-end">
-                @foreach ($abouts as $about)
                     @if (isset($about))
                         <div class="col-lg-6">
                             <div class="about-img">
@@ -87,7 +86,6 @@
                             </div>
                         </div>
                     @endif
-                @endforeach
             </div>
         </div>
     </div>
@@ -106,14 +104,14 @@
                     <h3 class="title">News & Announcements</h3>
                     <div class="column">
                         @foreach ($news as $service)
-                        <a href="/service/{{ $service->slug }}">
-                            <div class="inner-notice">
-                                <div class="inner-notice-date">
-                                    <p>{{ $service->created_at->format('j M') }}</p>
-                                </div>
-                                <p>{{ $service->title }}</p>
-                            </div>
                             <a href="/service/{{ $service->slug }}">
+                                <div class="inner-notice">
+                                    <div class="inner-notice-date">
+                                        <p>{{ $service->created_at->format('j M') }}</p>
+                                    </div>
+                                    <p>{{ $service->title }}</p>
+                                </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
@@ -121,14 +119,14 @@
                     <h3 class="title">Upcoming Events</h3>
                     <div class="column">
                         @foreach ($events as $service)
-                        <a href="/service/{{ $service->slug }}">
-                            <div class="inner-notice">
-                                <div class="inner-notice-date">
-                                    <p>{{ $service->created_at->format('j M') }}</p>
-                                </div>
-                                <p>{{ $service->title }}</p>
-                            </div>
                             <a href="/service/{{ $service->slug }}">
+                                <div class="inner-notice">
+                                    <div class="inner-notice-date">
+                                        <p>{{ $service->created_at->format('j M') }}</p>
+                                    </div>
+                                    <p>{{ $service->title }}</p>
+                                </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
@@ -147,9 +145,7 @@
                         @endforeach
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
@@ -164,11 +160,11 @@
             </div>
             <div class="row justify-content-center">
                 @foreach ($teams as $team)
-                    <div class="col-sm-6 col-lg-4">
+                    <div class="col-sm-6 col-lg-3">
                         <div class="doctors-item">
                             <div class="top">
-                                <img src="{{ env('APP_URL') . '/uploads/team/' . $team->image }}" class="img-responsive"
-                                    alt="{{ $team->name }}">
+                                <img src="{{ env('APP_URL') . '/uploads/team/' . $team->image }}"
+                                    class="img-responsive rounded" alt="{{ $team->name }}">
                             </div>
                             <div class="bottom">
                                 <div class="right">
@@ -196,7 +192,7 @@
             <div class="row">
                 @if (isset($counters))
                     @foreach ($counters as $counter)
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-lg-3 col-sm-6">
                             <div class="counter"
                                 style="border: 3px solid {{ $loop->iteration === 1 ? '#319b38' : ($loop->iteration === 2 ? '#32aaee' : ($loop->iteration === 3 ? '#fc6000' : ($loop->iteration === 4 ? '#f45a75' : 'black'))) }};
                         color: {{ $loop->iteration === 1 ? '#319b38' : ($loop->iteration === 2 ? '#32aaee' : ($loop->iteration === 3 ? '#fc6000' : ($loop->iteration === 4 ? '#f45a75' : 'black'))) }};

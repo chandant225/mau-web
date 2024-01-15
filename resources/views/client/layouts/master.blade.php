@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="">
     <meta name="author" content="">
-   
+
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/boxicons.min.css') }}" />
@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.css">
+
     @yield('metadata')
 </head>
 
@@ -44,6 +45,11 @@
     </div>
 
     @include('client.layouts.header')
+   <div class="tophead">
+    @if(isset($profile))
+        <marquee><h3>{{ $profile->marquee }}</h3></marquee>
+    @endif
+   </div>
     @yield('client_content')
     @include('client.layouts.footer')
 
@@ -70,8 +76,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="path/to/owl.carousel.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function() {
             $('.counter-value').each(function() {
@@ -108,6 +115,25 @@
             scrollbar: {
                 el: '.swiper-scrollbar',
             },
+        });
+    </script>
+    <script>
+        // Handle dropdown click events
+        $('.dropdown').on('click', function() {
+            // Toggle the dropdown content visibility
+            $(this).toggleClass('active');
+        });
+    
+        // Handle dropdown content item click events
+        $('.dropdown-content a').on('click', function(e) {
+            // Prevent the default link behavior
+            e.preventDefault();
+            
+            // Get the href attribute of the clicked item
+            var href = $(this).attr('href');
+    
+            // Redirect to the specified URL
+            window.location.href = href;
         });
     </script>
 

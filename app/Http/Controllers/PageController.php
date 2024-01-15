@@ -23,18 +23,18 @@ class PageController extends Controller
     public function home(){
         $teams = Team::orderBy('position', 'asc')->get();
         $sliders = Slider::all();
-        $news = Service::where('category', 'news')->take(6)->get();
-        $events = Service::where('category', 'events')->take(6)->get();
-        $results = Service::where('category', 'results')->take(6)->get();
+        $news = Service::where('category', 'news')->orderBy('created_at', 'desc')->take(6)->get();
+        $events = Service::where('category', 'events')->orderBy('created_at', 'desc')->take(6)->get();
+        $results = Service::where('category', 'results')->orderBy('created_at', 'desc')->take(6)->get();
         $testimonials = Testimonial::all();
         $blogs = Blog::all();
         $counters = Counter::all();
-        $abouts = About::all();
+        $about = About::orderBy('created_at','asc')->first();
         $faqs = Faq::orderBy('updated_at','desc')->get();
         $metatag = MetaTags::where('page','home_page')->get()->first();
-        return view('client.welcome',compact('sliders','news','events','results','teams','testimonials','blogs','metatag','counters','abouts','faqs'));
+        return view('client.welcome',compact('sliders','news','events','results','teams','testimonials','blogs','metatag','counters','about','faqs'));
     }
-
+   
     public function about(){
         $services = Service::all();
         $teams = Team::all();
@@ -73,6 +73,10 @@ class PageController extends Controller
         $blogs = Blog::all();
         $blog = Blog::where('slug', $slug)->first();
         return view('client.blog-details',compact('blogs','blog'));
+    }
+    public function departmentDetails($slug){
+        $department = Blog::where('department', $slug)->first();
+        return view('client.department-details',compact('department'));
     }
 
     public function galleryPage(){

@@ -18,7 +18,7 @@
                         <h2>About Us</h2>
                         <ul>
                             <li>
-                                <a href="{{route('home')}}">Home</a>
+                                <a href="{{ route('home') }}">Home</a>
                             </li>
                             <li>
                                 <span>About Us</span>
@@ -38,15 +38,15 @@
         <div class="container">
             <div class="row align-items-end">
                 @foreach ($abouts as $about)
-                    @if (isset($about))
-                        <div class="col-lg-12">
-                            <div class="about-image">
+                    @if ($loop->iteration % 2 == 0)
+                        <div class="col-lg-6">
+                            <div class="about-img">
                                 <img src="{{ env('APP_URL') . '/uploads/about/' . $about->filename }}"
                                     alt="{{ $about->title }}" />
                             </div>
                         </div>
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <div class="about-content">
                                 <div class="section-title">
                                     <div class="top">
@@ -54,9 +54,37 @@
                                         <span class="sub-title">About Us</span>
                                     </div>
                                     <h2>{{ $about->title }}</h2>
-                                    <p> {!! $about->description !!}</p>
+                                    <p> {!! Str::words($about->description, 100, ' ...') !!}</p>
                                 </div>
-                               
+                                <a class="common-btn" href="{{ route('about') }}">
+                                    <span class="one"></span>
+                                    <span class="two"></span>
+                                    More About Us
+                                </a>
+                            </div>
+                        </div>
+                    @else
+                        <div class="col-lg-6">
+                            <div class="about-content">
+                                <div class="section-title">
+                                    <div class="top">
+                                        <span class="top-title">About Us</span>
+                                        <span class="sub-title">About Us</span>
+                                    </div>
+                                    <h2>{{ $about->title }}</h2>
+                                    <p> {!! Str::words($about->description, 100, ' ...') !!}</p>
+                                </div>
+                                <a class="common-btn" href="{{ route('about') }}">
+                                    <span class="one"></span>
+                                    <span class="two"></span>
+                                    More About Us
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="about-img">
+                                <img src="{{ env('APP_URL') . '/uploads/about/' . $about->filename }}"
+                                    alt="{{ $about->title }}" />
                             </div>
                         </div>
                     @endif
@@ -65,68 +93,21 @@
         </div>
     </div>
 
-    <section class="services-area pt-100 pb-70">
-        <div class="container">
-            <div class="section-title">
-                <div class="top">
-                    <span class="top-title">Services</span>
-                    <span class="sub-title">Services</span>
-                </div>
-                <h2>Refractive Surgery Unit</h2>
-            </div>
-            <div class="row justify-content-center">
-                @foreach ($services as $service)
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="services-item">
-                            <div class="top">
-                                <a href="{{ route('service.details', ['slug' => $service->slug]) }}">
-                                    <img src="{{ env('APP_URL') . '/uploads/service/' . $service->filename }}"
-                                        alt="">
-                                </a>
-                            </div>
-                            <div class="bottom">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <i class="flaticon-lasik icon"></i>
-                                <h3>
-                                    <a href="{{ route('service.details', ['slug' => $service->slug]) }}">{{ $service->title }}</a>
-                                </h3>
-                                <p>
-                                    {!! Str::words($service->description, 8, ' ...') !!}
-                                </p>
-                                <div class="service-btn">
-                                    <a
-                                        href="{{ route('service.details', ['slug' => $service->slug]) }}">
-                                        More Details
-                                        <i class="bx bx-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
     <section class="doctors-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
                 <div class="top">
-                    <span class="top-title">Teams</span>
-                    <span class="sub-title">Teams</span>
+                    <span class="top-title">Officials</span>
+                    <span class="sub-title">Officials</span>
                 </div>
-                <h2>Eye Care Specialist</h2>
             </div>
             <div class="row justify-content-center">
                 @foreach ($teams as $team)
-                    <div class="col-sm-6 col-lg-4">
+                    <div class="col-sm-6 col-lg-3">
                         <div class="doctors-item">
                             <div class="top">
-                                <img src="{{ env('APP_URL') . '/uploads/team/' . $team->image }}" class="img-responsive"
-                                    alt="{{ $team->name }}">
+                                <img src="{{ env('APP_URL') . '/uploads/team/' . $team->image }}"
+                                    class="img-responsive rounded" alt="{{ $team->name }}">
                             </div>
                             <div class="bottom">
                                 <div class="right">

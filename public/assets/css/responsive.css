@@ -548,6 +548,22 @@
     .mean-container .mean-bar{
         padding: 25px 0;
     }
+    .mob-logo-title{
+        z-index: 999;
+        position: absolute;
+        inset: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+    .mob-logo-title h2{
+        font-size: 14px;
+    }
+    .mob-logo-title h5{
+        font-size: 12px;
+    }
+    #main-slider {
+        position: static;
+    }
   
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {

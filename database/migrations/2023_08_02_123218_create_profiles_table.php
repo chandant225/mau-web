@@ -19,6 +19,7 @@ class CreateProfilesTable extends Migration
             $table->string('email');
             $table->string('address');
             $table->string('phone');
+            $table->string('marquee');
             $table->string('facebookLink');
             $table->string('twitterLink');
             $table->string('linkdinlink');

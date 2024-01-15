@@ -34,8 +34,7 @@
                                         <th>address</th>
                                         <th>phone</th>
                                         <th>facebookLink</th>
-                                        <th>twitterLink</th>
-                                        <th>linkdinLink</th>
+                                        <th>marquee</th>
                                         <th>logo</th>
                                         <th>action</th>
                                     </tr>
@@ -48,8 +47,11 @@
                                             <td>{{ $profile->address }}</td>
                                             <td>{{ $profile->phone }}</td>
                                             <td>{{ $profile->facebookLink }}</td>
-                                            <td>{{ $profile->twitterLink }}</td>
-                                            <td>{{ $profile->linkdinlink }}</td>
+                                            <td>  <button data-toggle="modal"
+                                                data-target="#staticBackdrop{{ $loop->iteration }}" type="button"
+                                                class="btn btn-warning ml-2"><a class="text-white"
+                                                    href="#">View
+                                                    Content</a></button></td>
                                             <td><img src="{{ asset(env('APP_URL') . '/uploads/profile/' . $profile->image) }}"
                                                     alt="" class="w-25 img-responsive" />
                                             </td>
@@ -63,6 +65,29 @@
                                                 
                                             </td>
                                         </tr>
+                                        <div class="modal fade" id="staticBackdrop{{ $loop->iteration }}" data-backdrop="static"
+                                            data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">Marquee</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <section> {!! $profile->marquee !!}</section>
+    
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </tbody>
                                 @endforeach
                             </table>

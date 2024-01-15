@@ -38,6 +38,7 @@ Route::get('/services', [PageController::class, 'servicePage'])->name('services'
 Route::get('/service/{slug}', [PageController::class, 'serviceDetails'])->name('service.details');
 Route::get('/blogs', [PageController::class, 'blogs'])->name('blogs');
 Route::get('/blog/{slug}', [PageController::class, 'blogDetails'])->name('blog.details');
+Route::get('/department/{slug}', [PageController::class, 'departmentDetails'])->name('department.details');
 Route::get('/doctors', [PageController::class, 'doctors'])->name('doctors');
 Route::get('/doctor/{slug}', [PageController::class, 'doctorDetails'])->name('doctor.details');
 Route::get('/appointment', [PageController::class, 'appointment'])->name('appointment');
@@ -55,7 +56,6 @@ Route::post('/appointment', [AppointmentController::class, 'store'])->name('appo
 Route::get('/profile', [ProfileController::class, 'profilePage'])->name('profile');
 Route::get('/update-counter', [CounterController::class, 'updateCountersManually']);
                                                                                                                      
-
 Route::middleware('auth')->name('admin.')->group(function () {
     Route::get('/admin/dashboard', [PageController::class, 'dashboard']);
 
@@ -74,6 +74,7 @@ Route::middleware('auth')->name('admin.')->group(function () {
     Route::get('/admin/profile/edit/{id}', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::post('/admin/profile/update/{id}', [ProfileController::class, 'update'])->name('profile.update');
     Route::post('/admin/profile/delete/{id}', [ProfileController::class, 'destroy'])->name('profile.delete');
+    Route::post('/upload_profile_editor_image', [ProfileController::class, 'profileEditorUpload'])->name('profile.editor.upload');
 
     //counter
     Route::get('/admin/counter/list', [CounterController::class, 'index'])->name('counter.list');

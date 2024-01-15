@@ -57,6 +57,7 @@ class ProfileController extends Controller
             $profile->email = $request->email;
             $profile->address = $request->address;
             $profile->phone =  $request->phone;
+            $profile->marquee =  $request->marquee;
             $profile->facebookLink = $request->facebookLink;
             $profile->twitterLink = $request->twitterLink;
             $profile->linkdinlink = $request->linkdinlink;
@@ -112,6 +113,7 @@ class ProfileController extends Controller
                $profile->email = $request->email;
                $profile->address = $request->address;
                $profile->phone =  $request->phone;
+               $profile->marquee =  $request->marquee;
                $profile->facebookLink = $request->facebookLink;
                $profile->twitterLink = $request->twitterLink;
                $profile->linkdinlink = $request->linkdinlink;
@@ -128,6 +130,7 @@ class ProfileController extends Controller
             $profile->email = $request->email;
             $profile->address = $request->address;
             $profile->phone =  $request->phone;
+            $profile->marquee =  $request->marquee;
             $profile->facebookLink = $request->facebookLink;
             $profile->twitterLink = $request->twitterLink;
             $profile->linkdinlink = $request->linkdinlink;
@@ -156,5 +159,34 @@ class ProfileController extends Controller
       }
         $profile->delete();
         return redirect()->route('admin.profile.list')->with('success','profile has been deleted successfully.');
+    }
+
+    public function profileEditorUpload (Request $request) 
+    {
+          if($request->hasFile('upload')) {
+            //get filename with extension
+            $filenamewithextension = $request->file('upload')->getClientOriginalName();
+
+            //get filename without extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+            //get file extension
+            $extension = $request->file('upload')->getClientOriginalExtension();
+
+            //filename to store
+            $filenametostore = $filename.'_'.time().'.'.$extension;
+
+            //Upload File
+            $request->file('upload')->move(public_path().'/uploads/editor/profile', $filenametostore);
+
+            $CKEditorFuncNum = $request->input('CKEditorFuncNum');
+            $url = asset('uploads/editor/profile/'.$filenametostore);
+            $message = 'File uploaded successfully';
+            $result = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$message')</script>";
+
+            // Render HTML output
+            @header('Content-type: text/html; charset=utf-8');
+            echo $result;
+        }
     }
 }

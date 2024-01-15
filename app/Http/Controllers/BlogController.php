@@ -52,6 +52,7 @@ class BlogController extends Controller
             $blog->title = $request->title;
             $blog->slug = $slug;
             $blog->description = $request->description;
+            $blog->department = $request->department;
             $blog->meta_title = $request->meta_title;
             $blog->meta_description = $request->meta_description;
             $blog->meta_keywords = $request->meta_keywords;
@@ -114,6 +115,7 @@ class BlogController extends Controller
             $blog->title = $request->title;
             $blog->slug = $slug;
             $blog->description = $request->description;
+            $blog->department = $request->department;
             $blog->meta_title = $request->meta_title;
             $blog->meta_description = $request->meta_description;
             $blog->meta_keywords = $request->meta_keywords;
@@ -130,6 +132,7 @@ class BlogController extends Controller
             $blog->title = $request->title;
             $blog->slug = $slug;
             $blog->description = $request->description;
+            $blog->department = $request->department;
             $blog->meta_title = $request->meta_title;
             $blog->meta_description = $request->meta_description;
             $blog->meta_keywords = $request->meta_keywords;

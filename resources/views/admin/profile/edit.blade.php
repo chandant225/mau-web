@@ -24,6 +24,14 @@
                     enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
+                        <label for="marquee">Marquee</label>
+                        <textarea class="form-control" rows="3" name="marquee" placeholder="Enter marquee">{{ $profile->marquee }}</textarea>
+                        <span class="text-danger">
+                            @error('marquee')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="text" class="form-control" id="email" placeholder="Enter email"
@@ -105,3 +113,11 @@
     </div>
 @endsection
 
+@push('scripts')
+    <script>
+        CKEDITOR.replace('marquee', {
+            filebrowserUploadUrl: "{{ route('admin.profile.editor.upload', ['_token' => csrf_token()]) }}",
+            filebrowserUploadMethod: 'form'
+        })
+    </script>
+@endpush
